@@ -39,3 +39,13 @@ export const formatNumber = (number) => {
     return 'number too big'
   }
 }
+
+export const isAllNumbers = (arr) => {
+  var bol = true
+  for (let v of arr) {
+    if (isNaN(v)) {
+      return false
+    }
+  }
+  return bol
+}
