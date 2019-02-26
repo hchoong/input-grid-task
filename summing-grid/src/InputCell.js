@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types'
+import cx from 'classnames'
 
 class InputCell extends React.Component {
   constructor(props) {
@@ -14,7 +15,7 @@ class InputCell extends React.Component {
   render() {
     const { value } = this.props
     return (
-      <div className="cell">
+      <div className={cx({'cell': true, 'error': isNaN(value)})}>
         <input type="text" value={value} onChange={this.onInputChange} placeholder="number" />
       </div>
     )
