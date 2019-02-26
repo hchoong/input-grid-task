@@ -1,7 +1,7 @@
 import React from 'react';
 import InputCell from './InputCell'
 
-import { summing } from './func'
+import { summing, formatNumber } from './func'
 
 class App extends React.Component {
   constructor(props) {
@@ -41,7 +41,7 @@ class App extends React.Component {
             <InputCell key={index} index={index} value={val} cellUpdated={this.cellUpdated} />
           )}
           <div className="cell cell-total">
-            {sum}
+            {formatNumber(sum).toString()}
           </div>
         </div>
       </div>
